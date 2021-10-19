@@ -17,7 +17,8 @@
                 <span class="text-danger">{{ $errors->first('title') }}</span>
             </div>
             <div class="mb-3" {{ $errors->has('parent_id') ? 'has-error' : '' }}>
-                <select class="form-control" name="parent_id">
+                <label for="category margin-5" class="form-label">Category</label>
+                <select class="form-control" name="parent_id" id="category">
                     <option value="0" name="id">default</option>
 
                     @foreach($allCategories as $category)

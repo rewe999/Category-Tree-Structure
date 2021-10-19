@@ -71,3 +71,8 @@ button.center {
     height: 40px;
     margin-top: 5px;
 }
+
+.margin-5 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

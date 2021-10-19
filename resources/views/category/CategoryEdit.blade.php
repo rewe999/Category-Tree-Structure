@@ -2,7 +2,7 @@
 
 @section('content')
     @auth()
-        <div class="col-md-6">
+        <div class="col-md-6 block-center">
             <h3>Edit Category - {{$category->title}}</h3>
             <form action="{{route('edit.category',$id)}}" method="POST">
                 @csrf
@@ -21,17 +21,20 @@
                     <span class="text-danger">{{ $errors->first('title') }}</span>
                 </div>
                 <div class="mb-3" {{ $errors->has('parent_id') ? 'has-error' : '' }}>
+                    <label for="category margin-5" class="form-label">Change category</label>
                     <select class="form-control" aria-label="Default select example" name="parent_id">
                         <option value="0" name="id">default</option>
 
                         @foreach($allCategories as $category)
-                            <option value="{{$category->id}}" name="id">{{$category->title}}</option>
+                            @if($category->id != $id)
+                                <option value="{{$category->id}}" name="id">{{$category->title}}</option>
+                            @endif
                         @endforeach
                     </select>
                     <span class="text-danger">{{ $errors->first('parent_id') }}</span>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Edit</button>
+                <button type="submit" class="btn btn-primary center-block center">Edit</button>
             </form>
 
         </div>
