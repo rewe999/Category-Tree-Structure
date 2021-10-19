@@ -5,7 +5,7 @@
 <div class="container">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <div class="list-inline">
+            <div class="list-inline menu-flex">
                 <a href="{{route('get.category')}}" class="white">Manage Category TreeView</a>
                 @auth
                     <form action="{{ route('logout') }}" method="POST">
@@ -26,13 +26,3 @@
 <script src="/js/treeview.js"></script>
 </body>
 </html>
-
-<style>
-    .buttonLogout {
-        background: none!important;
-        border: none;
-        color: #fff;
-        text-decoration: none;
-        text-align: right;
-    }
-</style>
