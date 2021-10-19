@@ -5,7 +5,7 @@
 <div class="container">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <div class="inLine">
+            <div class="list-inline">
                 <a href="{{route('get.category')}}" class="white">Manage Category TreeView</a>
                 @auth
                     <form action="{{ route('logout') }}" method="POST">
