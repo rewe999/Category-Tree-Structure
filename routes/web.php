@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -22,9 +23,13 @@ Route::get('/', function () {
 Route::get('category/{id?}',[CategoryController::class,"manageCategory"])->name('get.category');
 
 //auth
-Route::post('category/{id?}',[CategoryController::class,"addCategory"])->name('add.category');
-Route::get('category/edit/{id}',[CategoryController::class,"editCategory"])->name('edit.view');
-Route::put('category/edit/{id}',[CategoryController::class,"updateCategory"])->name('edit.category');
-Route::delete('category/{id}',[CategoryController::class,"removeCategory"])->name('delete.category');
+Route::middleware(['auth'])->group(function (){
+    Route::post('category/{id?}',[CategoryController::class,"addCategory"])->name('add.category');
+    Route::get('category/edit/{id}',[CategoryController::class,"editCategory"])->name('edit.view');
+    Route::put('category/edit/{id}',[CategoryController::class,"updateCategory"])->name('edit.category');
+    Route::delete('category/{id}',[CategoryController::class,"removeCategory"])->name('delete.category');
+});
 
 Auth::routes();
+Route::get('register', [RegisterController::class,'showRegistrationForm'])->name('register')->middleware('auth');
+Route::get('register', [RegisterController::class,'register'])->middleware('auth');
