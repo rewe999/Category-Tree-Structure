@@ -27,15 +27,15 @@
                 <span class="text-danger">{{ $errors->first('parent_id') }}</span>
             </div>
 
-            <button type="submit" class="btn btn-success center-block mt-2">Add</button>
+            <button type="submit" class="btn btn-success center-block mt-2 center">Add</button>
         </form>
 
         @if($id > 0)
-            <button class="btn btn-primary white"><a href="{{route('edit.view',$id)}}" class="white">Edit</a></button>
+            <button class="btn btn-primary white center-block center"><a href="{{route('edit.view',$id)}}" class="white">Edit</a></button>
             <form action="{{route('delete.category',$id)}}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-danger center-block center">Delete</button>
             </form>
         @endif
     </div>

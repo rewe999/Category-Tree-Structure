@@ -65,3 +65,9 @@
 .white {
     color: #fff;
 }
+
+button.center {
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+}
