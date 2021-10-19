@@ -10,7 +10,7 @@
         <ul id="tree1">
             @foreach($categories as $category)
                 <li>
-                    <a href="{{route('get.category',$category->id)}}">{{ $category->title }}</a>
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> <a href="{{route('get.category',$category->id)}}">{{ $category->title }}</a>
                     @if(count($category->childs))
                         @include('category.CategoryChild',['childs' => $category->childs])
                     @endif

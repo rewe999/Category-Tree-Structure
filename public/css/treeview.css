@@ -65,3 +65,31 @@
 .white {
     color: #fff;
 }
+
+button.center {
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.margin-5 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.buttonLogout {
+    background: none!important;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    text-align: right;
+}
+
+.menu-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+}

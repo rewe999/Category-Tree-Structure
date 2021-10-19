@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,5 +28,3 @@ Route::put('category/edit/{id}',[CategoryController::class,"updateCategory"])->n
 Route::delete('category/{id}',[CategoryController::class,"removeCategory"])->name('delete.category');
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

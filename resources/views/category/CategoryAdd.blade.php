@@ -17,7 +17,8 @@
                 <span class="text-danger">{{ $errors->first('title') }}</span>
             </div>
             <div class="mb-3" {{ $errors->has('parent_id') ? 'has-error' : '' }}>
-                <select class="form-control" name="parent_id">
+                <label for="category margin-5" class="form-label">Category</label>
+                <select class="form-control" name="parent_id" id="category">
                     <option value="0" name="id">default</option>
 
                     @foreach($allCategories as $category)
@@ -27,15 +28,15 @@
                 <span class="text-danger">{{ $errors->first('parent_id') }}</span>
             </div>
 
-            <button type="submit" class="btn btn-success center-block mt-2">Add</button>
+            <button type="submit" class="btn btn-success center-block mt-2 center">Add</button>
         </form>
 
         @if($id > 0)
-            <button class="btn btn-primary white"><a href="{{route('edit.view',$id)}}" class="white">Edit</a></button>
+            <button class="btn btn-primary white center-block center"><a href="{{route('edit.view',$id)}}" class="white">Edit</a></button>
             <form action="{{route('delete.category',$id)}}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-danger center-block center">Delete</button>
             </form>
         @endif
     </div>
