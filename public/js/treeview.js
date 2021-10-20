@@ -51,7 +51,12 @@ $.fn.extend({
             });
         });
 
+        $('button.close').click(()=>{
+            $('.alert-dismissible').css('display','none')
+        })
     }
+
+
 });
 
 $('#tree1').treed();
