@@ -7,6 +7,11 @@ To manage/modify our tree, we have to do it from admin panel, which has permissi
 
 Regular user can only view the entire tree structure or individual branches.
 
+![screen shot](https://i.ibb.co/C9Kw5dN/NotLogIn.png)
+![screen shot](https://i.ibb.co/S0F0drZ/login.png)
+![screen shot](https://i.ibb.co/3dN6tYq/admin-Panel.png)
+![screen shot](https://i.ibb.co/sQPK9dW/edit.png)
+
 ## Installation
 ### 1. Create `.env` file based on `.env.example`:
 Linux:
@@ -28,7 +33,7 @@ or
 
 ### 3. Enter the container:
 ```shell script
-docker exec -it weather_laravel.test_1 /bin/bash
+docker exec -it (docker_id) /bin/bash
 ```
 
 ### 4. Fetch dependencies:
