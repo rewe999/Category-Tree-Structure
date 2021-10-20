@@ -27,7 +27,7 @@ class CategoryRequest extends FormRequest
         $lastId = Category::latest()->first()->id;
         return [
             'title'=> 'required|string|min:3',
-            'parent_id'=>'required|integer|gt:0|lt:'.$lastId,
+            'parent_id'=>'required|integer|gt:-1|lt:'.$lastId,
         ];
     }
 }
