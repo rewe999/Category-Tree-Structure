@@ -30,7 +30,7 @@ class CategoryController extends Controller
         return view('category.CategoryEdit',compact(['id','allCategories','category']));
     }
 
-    public function updateCategory($id,Request $request){
+    public function updateCategory($id,CategoryRequest $request){
         $category = Category::findOrFail($id);
         $category->title = $request['title'];
         $category->parent_id = $request['parent_id'];
