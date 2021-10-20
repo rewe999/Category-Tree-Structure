@@ -33,7 +33,7 @@ or
 
 ### 3. Enter the container:
 ```shell script
-docker exec -it weather_laravel.test_1 /bin/bash
+docker exec -it (docker_id) /bin/bash
 ```
 
 ### 4. Fetch dependencies:
