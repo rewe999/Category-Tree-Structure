@@ -3,9 +3,9 @@
 @section('content')
     <div class="col-md-6">
         @if($name)
-            <h3>Category List - {{$name->title}}</h3>
+            <h3 class="text-center">Category List - {{$name->title}}</h3>
         @else
-            <h3>Category List</h3>
+            <h3 class="text-center">Category List</h3>
         @endif
         <ul id="tree1">
             @foreach($categories as $category)

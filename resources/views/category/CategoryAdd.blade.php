@@ -1,6 +1,6 @@
 @auth()
     <div class="col-md-6">
-        <h3>Add New Category</h3>
+        <h3 class="text-center">Add New Category</h3>
         <form action="{{route('add.category',$id)}}" method="POST">
             @csrf
 
